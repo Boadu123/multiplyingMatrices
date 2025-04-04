@@ -5,17 +5,51 @@ public class Main{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the row of first matrix");
-        int rowA = scanner.nextInt();
+        int rowA, colA, rowB, colB;
 
-        System.out.println("Enter the column of first matrix");
-        int colA = scanner.nextInt();
+    while (true) {
+        System.out.print("Enter the row of first matrix: ");
+        if (scanner.hasNextInt()) {
+            rowA = scanner.nextInt();
+            break;
+        } else {
+            System.out.println("Invalid input! Please enter a number.");
+            scanner.next();
+        }
+    }
 
-        System.out.println("Enter the row of second matrix");
-        int rowB = scanner.nextInt();
+    while (true) {
+        System.out.print("Enter the column of first matrix: ");
+        if (scanner.hasNextInt()) {
+            colA = scanner.nextInt();
+            break;
+        } else {
+            System.out.println("Invalid input! Please enter a number.");
+            scanner.next();
+        }
+    }
 
-        System.out.println("Enter the column of second matrix");
-        int colB = scanner.nextInt();
+    while (true) {
+        System.out.print("Enter the row of second matrix: ");
+        if (scanner.hasNextInt()) {
+            rowB = scanner.nextInt();
+            break;
+        } else {
+            System.out.println("Invalid input! Please enter a number.");
+            scanner.next();
+        }
+    }
+
+    while (true) {
+        System.out.print("Enter the column of second matrix: ");
+        if (scanner.hasNextInt()) {
+            colB = scanner.nextInt();
+            break;
+        } else {
+            System.out.println("Invalid input! Please enter a number.");
+            scanner.next();
+        }
+    }
 
         if(colA != rowB){
             System.out.println("The Matrices cannot be multiplied");
@@ -73,3 +107,13 @@ public class Main{
         }
     }
 }
+
+// Example
+
+
+// 3 5 7
+// 4 9 8
+
+// 3 5
+// 3 2
+// 1 4
